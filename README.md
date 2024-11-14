@@ -1,6 +1,6 @@
 <div align="center">
 
-![arithmocha](media/icon.png)
+![arithmocha](github/icon.png)
 # ArithmeticMocha (arithmocha)
 Mathematics expression evaluation tools for Java
 
