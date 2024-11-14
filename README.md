@@ -32,6 +32,8 @@ Some things to work on
 
 - [x] Simple expression evaluation
 - [x] Nested expression evaluation
-- [ ] Function definitions
-- [ ] Functions with variables
-- [ ] Functions with multiple variables
+- [x] Function definitions
+- [x] Functions with variables
+- [x] Functions with multiple variables
+- [ ] Functions inside expressions
+- [ ] sqrt and other common functions
