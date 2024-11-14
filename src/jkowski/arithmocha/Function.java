@@ -6,6 +6,7 @@ import jkowski.arithmocha.exceptions.MissingVariables;
  * Mathematical functions
  */
 public class Function {
+    private final String name;
     private final String expression;
     private final String[] variables;
 
@@ -14,7 +15,8 @@ public class Function {
      * @param expression the expression with variables
      * @param variables the used variables
      */
-    public Function(String expression, String... variables) {
+    public Function(String name, String expression, String... variables) {
+        this.name = name;
         this.expression = expression;
         this.variables = variables;
     }
@@ -44,6 +46,14 @@ public class Function {
     }
 
     /**
+     * Get the functions name
+     * @return String
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
      * Get the internal expression of function
      * @return String
      */
@@ -61,6 +71,6 @@ public class Function {
 
     @Override
     public String toString() {
-        return String.format("f(%s) = %s", String.join(", ", this.variables), expression);
+        return String.format("%s(%s) = %s", name, String.join(", ", this.variables), expression);
     }
 }
