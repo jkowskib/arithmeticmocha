@@ -1,3 +1,5 @@
+<img align="left" src="media/icon.png" alt="icon" width="149">
+
 # ArithmeticMocha (arithmocha)
 Mathematics expression evaluation tools for Java
 
