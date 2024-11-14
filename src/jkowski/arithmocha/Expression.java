@@ -120,7 +120,8 @@ public class Expression {
             case "arcsin" -> Math.asin(Double.parseDouble(argument));
             case "arccos" -> Math.acos(Double.parseDouble(argument));
             case "arctan" -> Math.toDegrees(Double.parseDouble(argument));
-            default -> throw new InvalidSymbol("function unknown");
+            default -> throw new InvalidSymbol(
+                    String.format("unknown function '%s'", function));
         };
     }
 
