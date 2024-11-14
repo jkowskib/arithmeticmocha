@@ -14,7 +14,7 @@ public class Function {
      * @param expression the expression with variables
      * @param variables the used variables
      */
-    public Function(String expression, String[] variables) {
+    public Function(String expression, String... variables) {
         this.expression = expression;
         this.variables = variables;
     }

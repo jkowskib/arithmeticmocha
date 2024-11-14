@@ -6,7 +6,7 @@ import jkowski.arithmocha.Function;
 public class FunctionTests {
     public static void main(String[] args) {
         Function pythagoreanFormula = new Function(
-                "(a^2) + (b^2)", new String[]{"a", "b"}
+                "(a^2) + (b^2)", "a", "b"
         );
 
         System.out.println(pythagoreanFormula); // f(a, b) = (a^2) + (b^2)
