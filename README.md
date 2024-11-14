@@ -1,5 +1,5 @@
-<div style="display: flex; align-items: center;">
-  <img src="media/icon.png" alt="Description" style="margin-right: 20px;">
+<div>
+  <img align="left" src="media/icon.png" alt="Description">
   <div>
     <h1>ArithmeticMocha (arithmocha)</h1>
     <p>Mathematics expression evaluation tools for Java</p>
