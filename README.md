@@ -5,7 +5,6 @@ Mathematics expression evaluation tools for Java
 This library uses String parsing to be able to take in an
 equation such as `8 + 2` to give you `10`.
 
-An example usage would be for example;
 ```java
 import jkowski.arithmocha.Expression;
 
