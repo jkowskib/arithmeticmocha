@@ -36,4 +36,4 @@ Some things to work on
 - [x] Functions with variables
 - [x] Functions with multiple variables
 - [ ] Functions inside expressions
-- [ ] sqrt and other common functions
+- [x] sqrt and other common functions

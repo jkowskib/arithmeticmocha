@@ -6,7 +6,7 @@ import jkowski.arithmocha.Function;
 public class FunctionTests {
     public static void main(String[] args) {
         Function pythagoreanFormula = new Function(
-                "pythagoreanFormula", "(a^2) + (b^2)", "a", "b"
+                "pythagoreanFormula", "sqrt((a^2) + (b^2))", "a", "b"
         );
 
         System.out.println(pythagoreanFormula); // pythagoreanFormula(a, b) = (a^2) + (b^2)
@@ -15,9 +15,9 @@ public class FunctionTests {
                 2, 4 // a, b
         );
 
-        System.out.println(compiledFormula); // (2.0^2) + (4.0^2)
+        System.out.println(compiledFormula); // sqrt((2.0^2) + (4.0^2))
         System.out.println(
                 Expression.evaluate(compiledFormula)
-        ); // 20.0
+        ); // sqrt(20) or 4.47213595499958
     }
 }

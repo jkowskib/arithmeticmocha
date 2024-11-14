@@ -10,6 +10,9 @@ import java.util.ArrayList;
  */
 public class Expression {
     private static final String[] EXTRA_SYMBOLS = { "(", ")" };
+    private static final String[] FUNCTION_NAMES = {
+            "sqrt", "sin", "cos", "tan", "arcsin", "arccos", "arctan"
+    };
     private static final String[] OPERATION_ORDER = { "^", "/", "*", "+", "-" };
 
     /**
@@ -31,35 +34,43 @@ public class Expression {
      * @throws IncompleteExpression if an expression is incomplete or broken
      */
     private static double eval(ArrayList<String> stack) throws InvalidSymbol, IncompleteExpression {
-        while (stack.size() != 1) {
+        for (String function : FUNCTION_NAMES) {
+            while (stack.contains(function)) {
+                int index = stack.indexOf(function);
+                String right = stack.get(index + 1);
 
-            for (String searchOperation : OPERATION_ORDER) {
-                while (stack.contains(searchOperation)) {
-                    int index = stack.indexOf(searchOperation);
-                    String left = stack.get(index - 1);
-                    String right = stack.get(index + 1);
-                    char operation = stack.get(index).charAt(0);
+                double result = Expression.function(function, right);
 
-                    if (!isValidOperator(operation)) {
-                        throw new InvalidSymbol(
-                                String.format("'%s' is not a valid operator", operation)
-                        );
-                    }
+                stack.set(index, Double.toString(result));
+                stack.remove(index + 1);
+            }
+        }
 
-                    double result = Expression.operate(operation, left, right);
+        for (String searchOperation : OPERATION_ORDER) {
+            while (stack.contains(searchOperation)) {
+                int index = stack.indexOf(searchOperation);
+                String left = stack.get(index - 1);
+                String right = stack.get(index + 1);
+                char operation = stack.get(index).charAt(0);
+
+                if (!isValidOperator(operation)) {
+                    throw new InvalidSymbol(
+                            String.format("'%s' is not a valid operator", operation)
+                    );
+                }
+
+                double result = Expression.operate(operation, left, right);
 
                     // Set left to the result
-                    stack.set(index - 1, Double.toString(result));
-                    stack.remove(index); // Remove index
-                    stack.remove(index); // Remove right (the index shifts when removed)
-                }
+                stack.set(index - 1, Double.toString(result));
+                stack.remove(index); // Remove index
+                stack.remove(index); // Remove right (the index shifts when removed)
             }
+        }
 
-            // We can't have an expression two values and no operators, the expression is broken
-            if (stack.size() == 2) {
-                throw new IncompleteExpression("the given expression is incomplete");
-            }
-
+        // We can't have an expression two values and no operators, the expression is broken
+        if (stack.size() == 2) {
+            throw new IncompleteExpression("the given expression is incomplete");
         }
 
         return Double.parseDouble(stack.getFirst());
@@ -91,6 +102,26 @@ public class Expression {
                 stack.remove(startIndex + 1);
             }
         }
+    }
+
+    /**
+     * Executes a function
+     * @param function the function to run
+     * @param argument the argument
+     * @return double
+     * @throws InvalidSymbol if the function is unknown
+     */
+    private static double function(String function, String argument) throws InvalidSymbol {
+        return switch (function) {
+            case "sqrt" -> Math.sqrt(Double.parseDouble(argument));
+            case "sin" -> Math.sin(Double.parseDouble(argument));
+            case "cos" -> Math.cos(Double.parseDouble(argument));
+            case "tan" -> Math.tan(Double.parseDouble(argument));
+            case "arcsin" -> Math.asin(Double.parseDouble(argument));
+            case "arccos" -> Math.acos(Double.parseDouble(argument));
+            case "arctan" -> Math.toDegrees(Double.parseDouble(argument));
+            default -> throw new InvalidSymbol("function unknown");
+        };
     }
 
     /**
