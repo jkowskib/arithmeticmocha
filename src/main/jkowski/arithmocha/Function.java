@@ -12,6 +12,7 @@ public class Function {
 
     /**
      * Function that contains an expression with variables
+     * @param name gives the function a name
      * @param expression the expression with variables
      * @param variables the used variables
      */
@@ -25,6 +26,7 @@ public class Function {
      * Compiles the expression with the variable values filled
      * (output can be passed to Expression)
      * @return String of the compiled expression
+     * @param variables the variable values in order of definition
      * @throws MissingVariables if the given variables does not match the amount in the function
      */
     public String compile(double... variables) throws MissingVariables {

@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+sourceSets {
+    main {
+        java.setSrcDirs(["src/main"])
+        resources.setSrcDirs([])
+    }
+    test {
+        java.setSrcDirs(["src/tests"])
+        resources.setSrcDirs([])
+    }
+}
+
+jar {
+    archiveBaseName.set('arithmocha')
+    from(sourceSets.main.output)
+    from(tasks.javadoc)
+
+    manifest {
+        from("src/META-INF/MANIFEST.MF")
+    }
+}

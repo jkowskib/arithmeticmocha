@@ -20,6 +20,7 @@ public class Expression {
      * @param expression the expression to evaluate
      * @throws InvalidSymbol if an invalid math symbol is given
      * @throws IncompleteExpression if an expression is incomplete or broken
+     * @return double
      */
     public static double evaluate(String expression) throws InvalidSymbol, IncompleteExpression {
         ArrayList<String> stack = Expression.compile(expression);
