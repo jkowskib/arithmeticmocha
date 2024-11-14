@@ -1,7 +1,7 @@
 <div>
   <img align="left" src="media/icon.png" alt="Description">
   <div>
-    <h1>ArithmeticMocha (arithmocha)</h1>
+    <h1 style="border-bottom: none; margin: 0;">ArithmeticMocha (arithmocha)</h1>
     <p>Mathematics expression evaluation tools for Java</p>
   </div>
 </div>
