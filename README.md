@@ -1,7 +1,10 @@
-<img align="left" src="media/icon.png" alt="icon" width="149">
-
-# ArithmeticMocha (arithmocha)
-Mathematics expression evaluation tools for Java
+<div style="display: flex; align-items: center;">
+  <img src="media/icon.png" alt="Description" style="margin-right: 20px;">
+  <div>
+    <h1>ArithmeticMocha (arithmocha)</h1>
+    <p>Mathematics expression evaluation tools for Java</p>
+  </div>
+</div>
 
 ## How it works
 This library uses String parsing to be able to take in an
