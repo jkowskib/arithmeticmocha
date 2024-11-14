@@ -1,5 +1,3 @@
-package tests;
-
 import jkowski.arithmocha.Function;
 import jkowski.arithmocha.Expression;
 

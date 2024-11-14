@@ -1,5 +1,3 @@
-package tests;
-
 import jkowski.arithmocha.Expression;
 
 public class ExpressionTests {
