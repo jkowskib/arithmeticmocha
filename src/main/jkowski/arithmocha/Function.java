@@ -6,8 +6,17 @@ import jkowski.arithmocha.exceptions.MissingVariables;
  * Mathematical functions
  */
 public class Function {
+    /**
+     * Name of function
+     */
     private final String name;
+    /**
+     * Expression string
+     */
     private final String expression;
+    /**
+     * List of variables
+     */
     private final String[] variables;
 
     /**

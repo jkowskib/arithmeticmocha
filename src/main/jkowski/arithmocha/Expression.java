@@ -9,10 +9,19 @@ import java.util.ArrayList;
  * A mathematical expression
  */
 public class Expression {
+    /**
+     * Other import symbols but not operators
+     */
     private static final String[] EXTRA_SYMBOLS = { "(", ")" };
+    /**
+     * Valid inbuilt functions
+     */
     private static final String[] FUNCTION_NAMES = {
             "sqrt", "sin", "cos", "tan", "arcsin", "arccos", "arctan"
     };
+    /**
+     * Mathematics operators
+     */
     private static final String[] OPERATION_ORDER = { "^", "/", "*", "+", "-" };
 
     /**
@@ -30,6 +39,7 @@ public class Expression {
 
     /**
      * Evaluates a compiled expression
+     * @param stack the compiled stack to eval
      * @return double
      * @throws InvalidSymbol if an unknown symbol is given
      * @throws IncompleteExpression if an expression is incomplete or broken
