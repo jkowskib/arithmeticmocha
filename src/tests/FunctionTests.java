@@ -9,7 +9,7 @@ public class FunctionTests {
                 "c", "sqrt((a^2) + (b^2))", "a", "b"
         );
 
-        System.out.println(pythagoreanFormula); // c(a, b) = (a^2) + (b^2)
+        System.out.println(pythagoreanFormula); // c(a, b) = sqrt((a^2) + (b^2))
 
         String compiledFormula = pythagoreanFormula.compile(
                 2, 4 // a, b
