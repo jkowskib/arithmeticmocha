@@ -7,7 +7,14 @@ equation such as `8 + 2` to give you `10`.
 
 An example usage would be for example;
 ```java
-double result = Expression.evaluate("10 + 2 + 7 * 15");
+import jkowski.arithmocha.Expression;
+
+public class Example {
+    public static void main(String[] args) {
+        double result = Expression.evaluate("10 + 2 + 7 * 15");
+        System.out.println(result); // 117.0
+    }
+}
 ```
 
 This will evaluate and return the result of the expression.
