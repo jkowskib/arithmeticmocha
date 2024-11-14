@@ -1,9 +1,9 @@
-<div>
-  <img align="left" src="media/icon.png" alt="Description">
-  <div>
-    <h3>ArithmeticMocha (arithmocha)</h3>
-    <p>Mathematics expression evaluation tools for Java</p>
-  </div>
+<div align="center">
+
+![arithmocha](media/icon.png)
+# ArithmeticMocha (arithmocha)
+Mathematics expression evaluation tools for Java
+
 </div>
 
 <br>
