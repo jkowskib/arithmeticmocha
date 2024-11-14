@@ -1,7 +1,7 @@
 package tests;
 
-import jkowski.arithmocha.Expression;
 import jkowski.arithmocha.Function;
+import jkowski.arithmocha.Expression;
 
 public class FunctionTests {
     public static void main(String[] args) {
