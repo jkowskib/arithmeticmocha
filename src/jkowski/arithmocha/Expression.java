@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Expression {
     private static final String[] EXTRA_SYMBOLS = { "(", ")" };
-    private static final String[] OPERATION_ORDER = { "/", "*", "+", "-" };
+    private static final String[] OPERATION_ORDER = { "^", "/", "*", "+", "-" };
 
     /**
      * Evaluate an expression
@@ -106,6 +106,7 @@ public class Expression {
             case '-' -> Double.parseDouble(left) - Double.parseDouble(right);
             case '*' -> Double.parseDouble(left) * Double.parseDouble(right);
             case '/' -> Double.parseDouble(left) / Double.parseDouble(right);
+            case '^' -> Math.pow(Double.parseDouble(left), Double.parseDouble(right));
             default -> 0.0;
         };
     }
