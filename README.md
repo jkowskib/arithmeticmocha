@@ -35,5 +35,5 @@ Some things to work on
 - [x] Function definitions
 - [x] Functions with variables
 - [x] Functions with multiple variables
-- ~~[ ] Functions inside expressions~~ (Not sure if this is in scope, may come back later)
+- [ ] ~~Functions inside expressions~~ (Not sure if this is in scope, may come back later)
 - [x] sqrt and other common functions
