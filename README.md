@@ -1,10 +1,12 @@
 <div>
   <img align="left" src="media/icon.png" alt="Description">
   <div>
-    <h2>ArithmeticMocha (arithmocha)</h2>
+    <h3>ArithmeticMocha (arithmocha)</h3>
     <p>Mathematics expression evaluation tools for Java</p>
   </div>
 </div>
+
+<br>
 
 ## How it works
 This library uses String parsing to be able to take in an
