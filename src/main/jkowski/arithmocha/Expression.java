@@ -25,6 +25,11 @@ public class Expression {
     private static final String[] OPERATION_ORDER = { "^", "/", "*", "+", "-" };
 
     /**
+     * Mathematical expression
+     */
+    public Expression () {}
+
+    /**
      * Evaluate an expression
      * @param expression the expression to evaluate
      * @throws InvalidSymbol if an invalid math symbol is given
