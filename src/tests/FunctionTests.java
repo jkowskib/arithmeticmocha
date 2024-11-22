@@ -4,7 +4,7 @@ import jkowski.arithmocha.Expression;
 public class FunctionTests {
     public static void main(String[] args) {
         Function pythagoreanFormula = new Function(
-                "c", "sqrt((a^2) + (b^2))", "a", "b"
+                "c", "sqrt((a^2) + (b))", "a", "b"
         );
 
         System.out.println(pythagoreanFormula); // c(a, b) = sqrt((a^2) + (b^2))
@@ -17,5 +17,7 @@ public class FunctionTests {
         System.out.println(
                 Expression.evaluate(compiledFormula)
         ); // sqrt(20) or 4.47213595499958
+
+        assert Double.compare(Expression.evaluate(compiledFormula), Math.sqrt(20)) == 0;
     }
 }
